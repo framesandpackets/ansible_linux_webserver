@@ -13,10 +13,11 @@ Step 4:
 add IP address of your linux machines to 'hosts' file. You can find your IP address with ifconfig command
 
 Step 5: 
-create user on linux machine with username: ansible password: ansible or enter your username and password in hosts file
+create user on linux machine with username: ansible password: ansible, and add or sudoers
+or enter your username and password in hosts file
 
 Step 6:
 ansible-playbook webserver_install.yml
 
 
-Once the installtions take place your machine will gracefully reboot. DON'T PANIC!
+Once the installations take place your machine will gracefully reboot. DON'T PANIC!
