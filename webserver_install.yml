@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: Install apache httpd  
+    apt:
+      name: apache2
+      state: latest
+
+  - name: Install Sqlite
+    apt:
+      name: sqlite3
+      state: latest
+
+  - name: Install PHP & dependencies
+    apt:
+      name:
+      - php
+      - libapache2-mod-php
+      - php-mysql
+      state: latest
+
+  - name: Unconditional reboot of webserver
+    reboot:
+      
